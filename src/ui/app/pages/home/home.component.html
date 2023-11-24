@@ -1,0 +1,6 @@
+@if((isLoading$ | async) == true) {
+<p>Loading...</p>
+
+} @else { @for (news of news$ | async ; track $index) {
+<span> {{ news.title }} </span>
+} }
